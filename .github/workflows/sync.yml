@@ -1,8 +1,8 @@
 name: upload
 
 on:
-  schedule:
-    - cron: '0 22 * * 6'  
+#  schedule:
+#    - cron: '0 22 * * 6'  
   workflow_dispatch:     # 允许手动触发
 
 permissions:
