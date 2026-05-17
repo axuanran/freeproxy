@@ -1,0 +1,418 @@
+allow-lan: true
+dns:
+    enabled: true
+    fallback:
+        - 8.8.8.8
+        - 8.8.4.4
+        - tls://1.0.0.1:853
+        - tls://dns.google:853
+    nameserver:
+        - 119.29.29.29
+        - 223.5.5.5
+external-controller: :9090
+log-level: info
+mode: Rule
+port: 7890
+proxies:
+    - name: "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+      type: vless
+      server: r1.mizulina.top
+      port: 22231
+      client-fingerprint: edge
+      tls: true
+      servername: r1.mizulina.top
+      flow: xtls-rprx-vision-udp443
+      uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    - name: "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+      type: vless
+      server: 162.159.44.66
+      port: 2053
+      tls: true
+      servername: fu.baiproxy.us.ci
+      network: ws
+      ws-opts:
+        headers:
+            Host: fu.baiproxy.us.ci
+        path: /?ed=2560
+      uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+    - name: "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+      type: vless
+      server: 162.159.44.198
+      port: 443
+      tls: true
+      servername: fu.baiproxy.us.ci
+      network: ws
+      ws-opts:
+        headers:
+            Host: fu.baiproxy.us.ci
+        path: /?ed=2560
+      uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+    - name: "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+      type: ss
+      server: r3mrcg007117fb8.cybervena.com
+      port: 50099
+      cipher: chacha20-ietf-poly1305
+      password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+    - name: "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+      type: vless
+      server: 43.161.219.163
+      port: 22335
+      client-fingerprint: chrome
+      tls: true
+      servername: www.yahoo.com
+      flow: xtls-rprx-vision
+      network: tcp
+      reality-opts:
+        public-key: zPM3iLhD0ppwxYWzwiXFhQd1PwXCjFN9u28DbXdy604
+        short-id: a2346cd0
+      uuid: a3a8c354-a85c-477b-90f3-dbe08cadf31c
+    - name: "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+      type: vless
+      server: 178.18.147.163
+      port: 15530
+      client-fingerprint: chrome
+      tls: true
+      servername: www.microsoft.com
+      network: xhttp
+      reality-opts:
+        public-key: w8JMWRzOsYUuBeI0i_te745nBRlDocMOTgGMMZLioik
+        short-id: aa45df0f
+      uuid: ac121f97-544b-47b3-bf91-eca9c45db548
+      xhttp-opts:
+        path: /github.com/Alvin9999-newpac/fanqiang
+    - name: "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+      type: vmess
+      server: 82.198.246.250
+      port: 180
+      cipher: auto
+      alterId: "0"
+      network: tcp
+      ws-opts:
+        path: /
+      uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    - name: "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+      type: vmess
+      server: 82.198.246.233
+      port: 180
+      cipher: auto
+      alterId: "0"
+      network: tcp
+      ws-opts:
+        headers:
+            Host: ads.x5.ru
+        path: /
+      uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    - name: "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+      type: vless
+      server: 74.48.173.150
+      port: 28906
+      client-fingerprint: chrome
+      tls: true
+      servername: www.suffolk.edu
+      flow: xtls-rprx-vision
+      network: tcp
+      reality-opts:
+        public-key: wi1nGPSt-wF8rJIwpMTZI_5QG1qnkuzRyAWFEtgnBS0
+        short-id: 6ba85179e30d4fc2
+      uuid: d09c384b-384b-4d9a-85c6-07d3dce8ae5b
+      packet-encoding: xudp
+    - name: "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+      type: ss
+      server: 82.38.31.179
+      port: 8080
+      cipher: chacha20-ietf-poly1305
+      password: k1dBOmOB4oqi7Ump37a1bQ
+    - name: "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+      type: ss
+      server: 82.38.31.179
+      port: 8080
+      cipher: chacha20-ietf-poly1305
+      password: k1dBOmOB4oqi7Ump37a1bQ
+    - name: "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+      type: ss
+      server: 46.183.184.60
+      port: 989
+      cipher: aes-256-cfb
+      password: f8f7aCzcPKbsF8p3
+    - name: "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      type: ss
+      server: 211.178.105.134
+      port: 6123
+      cipher: aes-256-cfb
+      password: qwerREWQ@@
+proxy-groups:
+    - name: "\U0001F680 节点选择"
+      proxies:
+        - ♻️ 自动选择
+        - DIRECT
+        - "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+        - "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+        - "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+        - "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+        - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      type: select
+    - interval: 300
+      name: ♻️ 自动选择
+      proxies:
+        - "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+        - "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+        - "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+        - "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+        - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      tolerance: 50
+      type: url-test
+      url: http://www.gstatic.com/generate_204
+    - name: "\U0001F30D 国外媒体"
+      proxies:
+        - "\U0001F680 节点选择"
+        - ♻️ 自动选择
+        - "\U0001F3AF 全球直连"
+        - "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+        - "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+        - "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+        - "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+        - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      type: select
+    - name: "\U0001F4F2 电报信息"
+      proxies:
+        - "\U0001F680 节点选择"
+        - "\U0001F3AF 全球直连"
+        - "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+        - "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+        - "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+        - "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+        - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      type: select
+    - name: Ⓜ️ 微软服务
+      proxies:
+        - "\U0001F3AF 全球直连"
+        - "\U0001F680 节点选择"
+        - "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+        - "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+        - "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+        - "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+        - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      type: select
+    - name: "\U0001F34E 苹果服务"
+      proxies:
+        - "\U0001F680 节点选择"
+        - "\U0001F3AF 全球直连"
+        - "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+        - "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+        - "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+        - "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+        - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      type: select
+    - name: "\U0001F3AF 全球直连"
+      proxies:
+        - DIRECT
+        - "\U0001F680 节点选择"
+        - ♻️ 自动选择
+      type: select
+    - name: "\U0001F6D1 全球拦截"
+      proxies:
+        - REJECT
+        - DIRECT
+      type: select
+    - name: "\U0001F343 应用净化"
+      proxies:
+        - REJECT
+        - DIRECT
+      type: select
+    - name: "\U0001F18E AdBlock"
+      proxies:
+        - REJECT
+        - DIRECT
+      type: select
+    - name: "\U0001F41F 漏网之鱼"
+      proxies:
+        - "\U0001F680 节点选择"
+        - "\U0001F3AF 全球直连"
+        - ♻️ 自动选择
+        - "\U0001F1FA\U0001F1F8未知 VLESS-91原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_1原生IPyafeisun/v2raynode"
+        - "\U0001F1FA\U0001F1F8美国_4广播IPyafeisun/v2raynode"
+        - "\U0001F1E8\U0001F1F3TW SS-08 | free-nodes原生IPwenxig/free-nodes-sub"
+        - "\U0001F3F3️HK VLESS-88 | free-nodes广播IPwenxig/free-nodes-sub"
+        - "\U0001F1E9\U0001F1EAVLESS-xhttp-Reality-Vision原生IPwenxig/dongtai-sub"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8 美国4|@ripaojiedian原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7 GB英国(mibei77.com 米贝节点分享)原生IPEpodonios/v2ray-configs"
+        - "\U0001F1FA\U0001F1F8\U0001F1FA\U0001F1F8US_@WangCai_8广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1@Rayan_Config-82.38.31.179-@beepassvpn_bot原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
+        - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
+        - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+      type: select
+rule-providers:
+    Apple:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/Apple.txt
+        type: http
+        url: rules/ACL4SSR/Clash/Apple.list
+    BanAD:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/BanAD.txt
+        type: http
+        url: rules/ACL4SSR/Clash/BanAD.list
+    BanEasyList:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/BanEasyList.txt
+        type: http
+        url: rules/ACL4SSR/Clash/BanEasyList.list
+    BanEasyListChina:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/BanEasyListChina.txt
+        type: http
+        url: rules/ACL4SSR/Clash/BanEasyListChina.list
+    BanEasyPrivacy:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/BanEasyPrivacy.txt
+        type: http
+        url: rules/ACL4SSR/Clash/BanEasyPrivacy.list
+    BanProgramAD:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/BanProgramAD.txt
+        type: http
+        url: rules/ACL4SSR/Clash/BanProgramAD.list
+    ChinaCompanyIp:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/ChinaCompanyIp.txt
+        type: http
+        url: rules/ACL4SSR/Clash/ChinaCompanyIp.list
+    ChinaDomain:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/ChinaDomain.txt
+        type: http
+        url: rules/ACL4SSR/Clash/ChinaDomain.list
+    GoogleCN:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/GoogleCN.txt
+        type: http
+        url: rules/ACL4SSR/Clash/GoogleCN.list
+    LocalAreaNetwork:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/LocalAreaNetwork.txt
+        type: http
+        url: rules/ACL4SSR/Clash/LocalAreaNetwork.list
+    Microsoft:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/Microsoft.txt
+        type: http
+        url: rules/ACL4SSR/Clash/Microsoft.list
+    ProxyLite:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/ProxyLite.txt
+        type: http
+        url: rules/ACL4SSR/Clash/ProxyLite.list
+    ProxyMedia:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/ProxyMedia.txt
+        type: http
+        url: rules/ACL4SSR/Clash/ProxyMedia.list
+    SteamCN:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/SteamCN.txt
+        type: http
+        url: rules/ACL4SSR/Clash/Ruleset/SteamCN.list
+    Telegram:
+        behavior: classical
+        format: text
+        interval: 86400
+        path: ./providers/Telegram.txt
+        type: http
+        url: rules/ACL4SSR/Clash/Telegram.list
+rules:
+    - "RULE-SET,LocalAreaNetwork,\U0001F3AF 全球直连"
+    - "RULE-SET,BanAD,\U0001F6D1 全球拦截"
+    - "RULE-SET,BanProgramAD,\U0001F343 应用净化"
+    - "RULE-SET,BanEasyList,\U0001F18E AdBlock"
+    - "RULE-SET,BanEasyListChina,\U0001F18E AdBlock"
+    - "RULE-SET,BanEasyPrivacy,\U0001F18E AdBlock"
+    - "RULE-SET,GoogleCN,\U0001F3AF 全球直连"
+    - "RULE-SET,SteamCN,\U0001F3AF 全球直连"
+    - RULE-SET,Microsoft,Ⓜ️ 微软服务
+    - "RULE-SET,Apple,\U0001F34E 苹果服务"
+    - "RULE-SET,ProxyMedia,\U0001F30D 国外媒体"
+    - "RULE-SET,Telegram,\U0001F4F2 电报信息"
+    - "RULE-SET,ProxyLite,\U0001F680 节点选择"
+    - "RULE-SET,ChinaDomain,\U0001F3AF 全球直连"
+    - "RULE-SET,ChinaCompanyIp,\U0001F3AF 全球直连"
+    - "GEOIP,CN,\U0001F3AF 全球直连"
+    - "MATCH,\U0001F41F 漏网之鱼"
+socks-port: 7891
