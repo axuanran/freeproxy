@@ -140,6 +140,84 @@ proxies:
       port: 6123
       cipher: aes-256-cfb
       password: qwerREWQ@@
+    - name: "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+      type: vless
+      server: 195.209.90.178
+      port: 443
+      client-fingerprint: qq
+      tls: true
+      servername: s28233.cdn.ngenix.net
+      network: ws
+      ws-opts:
+        headers:
+            Host: s28233.cdn.ngenix.net
+      alpn:
+        - h2
+        - http/1.1
+      uuid: d471e982-4237-Fade-94df-c0d11029282a
+    - name: "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+      type: vless
+      server: 31.130.155.114
+      port: 8443
+      client-fingerprint: qq
+      tls: true
+      servername: api.max.ru
+      flow: xtls-rprx-vision
+      network: tcp
+      reality-opts:
+        public-key: aySWi4vGm4__zU_RFNtym1AyjtfY0AX9WoigfVG7hWA
+        short-id: be84ee20a35bfdd2
+      uuid: 6183c1c0-2853-4e83-b31b-19527950b23b
+    - name: "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+      type: vless
+      server: 95.182.110.30
+      port: 443
+      client-fingerprint: chrome
+      tls: true
+      servername: cdn.trahodrom.fun
+      flow: xtls-rprx-vision
+      network: tcp
+      reality-opts:
+        public-key: IBvNLerjNLpF4OpUX-wGJp8YDZrnKoh-gEItUDNT_Bg
+      uuid: 9434adfb-56a6-0114-a3bc-6bf1cebb4f78
+    - name: "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+      type: vless
+      server: 89.208.231.52
+      port: 443
+      client-fingerprint: chrome
+      tls: true
+      servername: max.ru
+      flow: xtls-rprx-vision
+      network: tcp
+      reality-opts:
+        public-key: mAu8QDi3pbmMCFg9kKC-ZBIHdtnXeCuZt3VnAw6vlH4
+        short-id: ad7dab462a323acb
+      uuid: b6ce8a51-19b9-4979-91ba-b4298c26d5fc
+    - name: "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+      type: vless
+      server: 195.209.82.149
+      port: 443
+      tls: true
+      servername: s28233.cdn.ngenix.net
+      network: ws
+      ws-opts:
+        headers:
+            Host: s28233.cdn.ngenix.net
+        path: /
+      uuid: c3f112fc-1041-Fade-b85c-5ed478daeeb9
+    - name: "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
+      type: vless
+      server: 84.201.169.50
+      port: 443
+      client-fingerprint: chrome
+      tls: true
+      servername: ads.x5.ru
+      flow: xtls-rprx-vision
+      network: tcp
+      reality-opts:
+        public-key: oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk
+        short-id: c31f9a0e7d4b52
+      uuid: fd365b7e-26eb-479a-a009-e182d827de04
 proxy-groups:
     - name: "\U0001F680 节点选择"
       proxies:
@@ -158,6 +236,12 @@ proxy-groups:
         - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
         - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
         - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+        - "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+        - "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+        - "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
       type: select
     - interval: 300
       name: ♻️ 自动选择
@@ -175,6 +259,12 @@ proxy-groups:
         - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
         - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
         - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+        - "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+        - "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+        - "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
       tolerance: 50
       type: url-test
       url: http://www.gstatic.com/generate_204
@@ -196,6 +286,12 @@ proxy-groups:
         - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
         - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
         - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+        - "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+        - "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+        - "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
       type: select
     - name: "\U0001F4F2 电报信息"
       proxies:
@@ -214,6 +310,12 @@ proxy-groups:
         - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
         - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
         - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+        - "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+        - "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+        - "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
       type: select
     - name: Ⓜ️ 微软服务
       proxies:
@@ -232,6 +334,12 @@ proxy-groups:
         - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
         - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
         - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+        - "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+        - "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+        - "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
       type: select
     - name: "\U0001F34E 苹果服务"
       proxies:
@@ -250,6 +358,12 @@ proxy-groups:
         - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
         - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
         - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+        - "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+        - "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+        - "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
       type: select
     - name: "\U0001F3AF 全球直连"
       proxies:
@@ -290,6 +404,12 @@ proxy-groups:
         - "\U0001F1F3\U0001F1F1\U0001F1EC\U0001F1E7GB-82.38.31.179-0179原生IPEpodonios/v2ray-configs"
         - "\U0001F1ED\U0001F1F7\U0001F1ED\U0001F1F7HR-46.183.184.60-0167广播IPEpodonios/v2ray-configs"
         - "\U0001F1F0\U0001F1F7\U0001F1F0\U0001F1F7KR-211.178.105.134-0196原生IPEpodonios/v2ray-configs"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #6原生IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1F7\U0001F1FA Timeweb — #9原生IPzieng2/wl"
+        - "\U0001F1E9\U0001F1EA\U0001F1E9\U0001F1EA Germany — #34广播IPzieng2/wl"
+        - "\U0001F3F3️\U0001F1EB\U0001F1EE Finland — #72广播IPzieng2/wl"
+        - "\U0001F1F7\U0001F1FA\U0001F1EC\U0001F1E7 United Kingdom — #110广播IPzieng2/wl"
+        - "\U0001F1F8\U0001F1EA\U0001F1F3\U0001F1F1 The Netherlands — #120广播IPzieng2/wl"
       type: select
 rule-providers:
     Apple:
