@@ -1,0 +1,88 @@
+name: upload
+
+on:
+  schedule:
+    - cron: '0 22 * * 6'  
+  workflow_dispatch:     # 允许手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安全下载并处理代理配置
+        run: |
+          mkdir -p sub
+
+          # 预检查 Secret（防止漏配导致静默失败）
+          if [ -z "${{ secrets.DOWNLOAD_URL_CLASH }}" ] || \
+             [ -z "${{ secrets.DOWNLOAD_URL_V2RAY }}" ] || \
+             [ -z "${{ secrets.DOWNLOAD_URL_SURGE }}" ]; then
+            echo "❌ 缺失必要的 Secret，请前往仓库 Settings → Secrets 补全"
+            exit 1
+          fi
+
+          # 1. 下载 Clash 配置
+          curl -L -f --retry 3 --retry-delay 2 --max-time 30 \
+            -H "User-Agent: Clash/Windows" \
+            -o sub/clash.yaml "${{ secrets.DOWNLOAD_URL_CLASH }}"
+
+          # 2. 下载 V2Ray 配置 (原始 Base64)
+          curl -L -f --retry 3 --retry-delay 2 --max-time 30 \
+            -H "User-Agent: v2rayN/5.50" \
+            -o sub/v2ray_raw "${{ secrets.DOWNLOAD_URL_V2RAY }}"
+
+          # 3. 下载 Surge 配置
+          curl -L -f --retry 3 --retry-delay 2 --max-time 30 \
+            -H "User-Agent: Surge/iOS" \
+            -o sub/surge.conf "${{ secrets.DOWNLOAD_URL_SURGE }}"
+
+          # 4. 智能解码 V2Ray Base64
+          if [ -s sub/v2ray_raw ]; then
+            if tr -d '\n\r ' < sub/v2ray_raw | base64 -d > sub/v2ray 2>/dev/null; then
+              rm -f sub/v2ray_raw
+              echo "✅ V2Ray Base64 解码成功"
+            else
+              echo "⚠️ V2Ray 内容非标准 Base64 或已为明文，保留原始内容"
+              mv sub/v2ray_raw sub/v2ray
+            fi
+          fi
+
+          # 5. 替换 Surge 配置首行：仅更新 MANAGED-CONFIG 中的订阅链接，保留尾部参数
+          TARGET_URL="https://raw.githubusercontent.com/axuanran/freeproxy/refs/heads/main/sub/surge.conf"
+          if [ -s sub/surge.conf ]; then
+            # 正则说明：匹配 #!MANAGED-CONFIG + 任意非空格字符(旧链接) + 捕获尾部参数(如 interval=...)
+            # 替换为：固定前缀 + 新链接 + 原样保留的尾部参数
+            if sed -i '1s|^#!MANAGED-CONFIG [^ ]*\(.*\)|#!MANAGED-CONFIG '"$TARGET_URL"'\1|' sub/surge.conf; then
+              echo "✅ Surge 配置首行链接已更新"
+            else
+              echo "⚠️ Surge 首行替换失败，检查文件格式"
+            fi
+          fi
+
+          # 6. 统一校验（确保最终交付的文件均有效）
+          for file in sub/clash.yaml sub/v2ray sub/surge.conf; do
+            if [ ! -s "$file" ]; then
+              echo "❌ 文件为空或下载失败: $file"
+              exit 1
+            fi
+          done
+          echo "✅ 全量配置下载、解码与处理完成"
+      - name: 提交并推送（仅变更时）
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add sub/
+          
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "🤖 自动同步: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            git push
+            echo "✅ 推送成功"
+          else
+            echo "⏭️ 文件无变化，跳过提交"
+          fi
